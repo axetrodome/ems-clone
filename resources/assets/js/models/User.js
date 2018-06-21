@@ -1,5 +1,5 @@
 export default {
-	all(then) {
+	get(then) {
 		return axios.get('/user/profile')
 				.then(({data}) => then(data))
 	}

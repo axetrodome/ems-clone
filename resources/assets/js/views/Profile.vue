@@ -22,7 +22,7 @@ export default {
 		}
 	},
 	created() {
-        User.all(users => this.users = users)
+        User.get(users => this.users = users)
 	}
 };
 </script>

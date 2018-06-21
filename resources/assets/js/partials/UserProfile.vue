@@ -29,25 +29,29 @@ import Form from '../core/Form'
 		},
 		watch: {
 		  users(value) {
-			this.form.name = value.name			
-			this.form.email = value.email		
+		  	for(let field in this.form.data()) {
+		  		this.form[field] = value[field];
+		  	}
 		  }
 		},
 		computed: {
 			//
 		},
 		mounted() {
-
+			console.log(this.form.data()) 
 		},
 		methods:{
 			//
 			onSubmit() {
+				var SuccessToastHTML = `<b>Success: </b> Profile Updated `;
+				var FailedToastHTML = '<b>Error: </b> Whoops! something went wrong';
+				
 				this.form.update('/user/update')
 					.then(res => {
-						M.toast({html: 'Success',classes:'green darken-1'})
+						M.toast({html: SuccessToastHTML,classes:'green darken-1'})
 					})
 					.catch(err => {
-						M.toast({html: 'Error',classes:'red darken-1',})
+						M.toast({html: FailedToastHTML,classes:'red darken-1',})
 					})
 			}
 		}

@@ -16,10 +16,9 @@ class Form{
 
 		let data = {}
 
-		for(let propery in this.originalData) {
-			data[propery] = this[propery]
+		for(let property in this.originalData) {
+			data[property] = this[property]
 		}
-
 		return data;
 	}
 

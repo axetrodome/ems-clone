@@ -20,3 +20,4 @@ Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
 Route::get('/user/profile','UserController@show')->name('user.profile');
 Route::patch('/user/update','UserController@update');
+Route::patch('/user/update_password','UserController@change_password');
