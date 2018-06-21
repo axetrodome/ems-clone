@@ -46,9 +46,11 @@
     
     @include ('partials.footer')
     <script src="/js/app.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
         $(document).ready(function() {
+            M.updateTextFields();
             M.AutoInit();
 
             $('.dropdown-trigger').dropdown({

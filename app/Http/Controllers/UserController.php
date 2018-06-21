@@ -12,4 +12,21 @@ class UserController extends Controller
     	return view('users.profile');
     }
 
+    public function show()
+    {
+    	return my();
+    }
+
+    public function update()
+    {
+
+        //validation
+
+    	my()->update([
+            'name' => request('name'),
+    		'email' => request('email')
+    	]);
+        return my(); 
+    }
+
 }

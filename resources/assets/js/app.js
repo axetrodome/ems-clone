@@ -4,6 +4,5 @@ import './bootstrap'
 
 
 new Vue({
-    el: '#app',
     router
-});
+}).$mount('#app')

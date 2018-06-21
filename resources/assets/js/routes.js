@@ -4,17 +4,21 @@ let routes = [
 	{
 		path:'/',
 		components:{
-			profile:require('./components/Profile'),
-			dashboard:require('./components/Schedule')
+			profile:require('./views/Profile'),
+			dashboard:require('./views/Schedule')
 		}
 	},
 	{
 		path:'/account',
-		component:require('./components/Account')
+		component:require('./views/Account')
 	},
 	{
 		path:'/curriculum',
-		component:require('./components/Curriculum')
+		component:require('./views/Curriculum')
+	},
+	{
+		path:'/add_students',
+		component:require('./components/AddStudent')
 	}
 ];
 

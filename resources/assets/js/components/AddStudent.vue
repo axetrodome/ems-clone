@@ -1,9 +1,8 @@
 <template>
-	<h1>Profile</h1>
+	<h1>Add Student here</h1>
 </template>
-
 <script>
 	export default {
-		//
+
 	};
 </script>

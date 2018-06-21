@@ -18,6 +18,10 @@
 		<router-link tag="li" to="/curriculum">
 		  <a class="waves-effect">Curriculum</a>
 		</router-link>
+
+		<router-link tag="li" to="/add_students">
+		  <a class="waves-effect">Add Students</a>
+		</router-link>
 	@endcomponent
 	<router-view></router-view>
 	<router-view name="dashboard"></router-view>

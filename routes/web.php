@@ -13,8 +13,10 @@
 
 Route::get('/','HomeController@index')->name('home');
 Auth::routes();
+
 Route::get('/student/register', 'StudentController@create')->name('student.register');
-
 Route::get('/settings','UserController@profile')->name('settings');
-
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
+
+Route::get('/user/profile','UserController@show')->name('user.profile');
+Route::patch('/user/update','UserController@update');
